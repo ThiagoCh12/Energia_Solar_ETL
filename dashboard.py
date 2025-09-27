@@ -69,8 +69,14 @@ def criar_dashboard(df):
     
     elif opcao == "Gráfico Personalizado":
         st.subheader("📈 Gráfico Personalizado")
-        coluna_x = st.selectbox("Selecione a coluna X:", df.columns, key="x_sidebar")
-        coluna_y = st.selectbox("Selecione a coluna Y:", df.columns, key="y_sidebar")
+        coluna_x = st.selectbox("Selecione a coluna X:", 
+                                df.columns, 
+                                index=list(df.columns).index("temperatura_inversor"), 
+                                key="x_sidebar")
+        coluna_y = st.selectbox("Selecione a coluna Y:", 
+                                df.columns, 
+                                index=list(df.columns).index("geração_energetica_kwh"),
+                                key="y_sidebar")
         st.line_chart(df, x=coluna_x, y=coluna_y)
         
         

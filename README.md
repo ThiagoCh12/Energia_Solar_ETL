@@ -52,7 +52,7 @@ python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate  # Windows
 ```
-caso o windows apresente um erro de acesso nao autorizado, rode:
+Caso o windows apresente um erro de acesso nao autorizado, rode:
 
 ```
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
@@ -86,6 +86,7 @@ Acesse no navegador: 👉 http://localhost:8501
 ## 👨‍💻 Autor
 
 Thiago Chagas 
+
 
 
 
