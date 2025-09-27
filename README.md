@@ -11,10 +11,11 @@ Este projeto realiza um processo **ETL ** em dados de energia solar, armazena os
 - **PostgreSQL** → persistência dos dados
 - **Streamlit** → criação do dashboard
 
----
+
 
 ## 📂 Estrutura do projeto
-📦 projeto_etl
+``` 
+📦 Energia_Solar_ETL
  ┣ 📜 main.py              # Arquivo principal
  ┣ 📜 etl.py               # Funções de extração e transformação
  ┣ 📜 db.py                # Conexão com PostgreSQL
@@ -22,42 +23,54 @@ Este projeto realiza um processo **ETL ** em dados de energia solar, armazena os
  ┣ 📜 DataModel.xlsx       # Arquivo de dados de entrada
  ┣ 📜 dependencias.txt     # Dependências do projeto
  ┗ 📜 README.md            # Este arquivo
+```
 
----
 
 ## ⚙️ Pré-requisitos
 1. **Python 3.10 ou superior** instalado  
 2. **PostgreSQL** em execução  
 3. Criar um banco de dados chamado `etl_db` no PostgreSQL:
-
+````
 CREATE DATABASE etl_db;
-
+````
 4. Ajustar os dados de conexão no arquivo `db.py`:  
-
+``
 url = "postgresql://usuario:senha@localhost:5432/etl_db"
-
+``
 ---
 
 ## 🔧 Instalação
 Clone o repositório:
-git clone https://github.com/ThiagoCh12/projeto_etl.git
-cd projeto_etl
-
+````
+git clone https://github.com/ThiagoCh12/Energia_Solar_ETL.git
+cd Energia_Solar_ETL
+````
 Crie um ambiente virtual e ative:
-python3 -m venv venv
+
+```
+python -m venv venv
 source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+venv\Scripts\activate  # Windows
+```
+caso o windows apresente um erro de acesso nao autorizado, rode:
+
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+venv\Scripts\activate 
+```
 
 Instale as dependências:
+```
 pip install -r dependencias.txt
-
+```
 ---
 
 ## ▶️ Como executar
 
 ### 1. Iniciar o dashboard interativo:
-streamlit run dashboard.py
-
+````
+streamlit run main.py
+````
 Acesse no navegador: 👉 http://localhost:8501
 
 ---
@@ -71,4 +84,11 @@ Acesse no navegador: 👉 http://localhost:8501
 ---
 
 ## 👨‍💻 Autor
+
 Thiago Chagas 
+
+
+
+
+
+
